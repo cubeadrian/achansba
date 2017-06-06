@@ -21,7 +21,7 @@
 						<li><a href="index.html">Home</a></li>
 						<li><a href="aboutus.html">About Us</a></li>
 						<li><a href="courses.html">Our Courses</a></li>
-						<li><a href="contact.html">Our Courses</a></li>
+						<li><a href="contact.html">Contact us</a></li>
 					</ul>
 				</nav>
 			</header>
@@ -58,7 +58,6 @@
   <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
   <a class="next" onclick="plusSlides(1)">&#10095;</a>
 </div>
-<br>
 
 <div style="text-align:center">
   <span class="dot" onclick="currentSlide(1)"></span>
@@ -72,42 +71,40 @@
 			<h2>Our Tutor</h2>
 			<p>All our tutors have the required certificates and registration from the Hong Kong EDB</p>
 		</header>
-			<p>
+		<div class="circle-chart circle-chart--with-track">
+	    <div align="center"></br>60%
+	  </div>
+	  <div id="qunit"></div>
+	  <div id="qunit-fixture"></div>
+	  <script src="js/raphael-min.js"></script>
+	  <script src="js/circle-chart.js"></script>
+	  <script>
+	  window.onload = function () {
+	    var el, c1;
+	    el = document.querySelector('.circle-chart--with-track');
+	    c1 = new CircleChart(el, { stroke:10, maxVal:100,colour:'#394c7c',animationSpeed: 4000,edgeWidth:0,edgeGap:100,edgeColour:undefined,trackColour:'#bec3ce'});
+	    if (window.MutationObserver) {
+	      var config = { attributes: false, childList: true, characterData: false };
+	      var observer = new MutationObserver(function(mutations) {
+	          console.log(c1.inner.innerText);
+	          c1.changeValue(parseFloat(c.inner.innerHTML));
+	      });
+	      observer.observe(c1.elem, config);
+	    }
+	  }
+	  </script>
+
 	</div>
 </section>
+
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<script>
-			var slideIndex = 1;
-showSlides(slideIndex);
+			<script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.2.1/raphael.min.js"></script>
+			<script src="js/circle-chart.js"></script>
 
-function plusSlides(n) {
-showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-var i;
-var slides = document.getElementsByClassName("mySlides");
-var dots = document.getElementsByClassName("dot");
-if (n > slides.length) {slideIndex = 1}
-if (n < 1) {slideIndex = slides.length}
-for (i = 0; i < slides.length; i++) {
-		slides[i].style.display = "none";
-}
-for (i = 0; i < dots.length; i++) {
-		dots[i].className = dots[i].className.replace(" active", "");
-}
-slides[slideIndex-1].style.display = "block";
-dots[slideIndex-1].className += " active";
-}
-	</script>
 	</body>
 </html>
