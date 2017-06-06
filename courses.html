@@ -1,0 +1,132 @@
+<!DOCTYPE HTML>
+<!--
+	Spatial by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Tan Tan Tutorial Centre</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header">
+				<h1><strong><a href="index.html">Tan Tan</a></strong> Tutorial Centre</h1>
+				<nav id="nav">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="aboutus.html">About Us</a></li>
+						<li><a href="courses.html">Our Courses</a></li>
+						<li><a href="contact.html">Contact us</a></li>
+					</ul>
+				</nav>
+			</header>
+
+			<a href="#menu" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+
+		<!-- Main -->
+			<section id="main" class="wrapper">
+				<div class="container">
+
+					<header class="major special">
+						<h2>Our Courses</h2>
+					</header>
+					<div class="slideshow-container">
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 3</div>
+    <img src="./images/1.jpg" style="width:100%">
+    <div class="text">Our Tutor</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 3</div>
+    <img src="./images/pic01.jpg" style="width:100%">
+    <div class="text">Our classrooms</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+    <img src="./images/pic02.jpg" style="width:100%">
+    <div class="text">Our Customer Services team</div>
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+
+<section id="three" class="wrapper style1">
+	<div class="container">
+		<header class="major special">
+			<h2>Our Tutor</h2>
+			<p>Both Graduates and Existing Students</p>
+		</header>
+		<div class="feature-grid">
+			<div class="feature">
+				<div class="content">
+					<header>
+						<h4>YY Lam</h4>
+						<p>Diocesan Boys' School</p>
+						<p>Class of 2017</p>
+					</header>
+					<p>Tan Tan's Tutorial Centre is a wonderful tutorial centre offer leading courses to help the students to boost their grades. For myself, I personally think that YY Lam is a wonderful tutor, offer unlimited help to students who have difficulties with their studies</p>
+				</div>
+			</div>
+			<div class="feature">
+				<div class="content">
+					<header>
+						<h4>Athena Wong</h4>
+						<p>Heep Yunn School</p>
+					</header>
+					<p>Billy Ng, the English tutor, is the teacher who help me the most with my studies, since I am not at English, Billy offered me with extra helps after class through Facebook and Whatsapp. Thanks for the unlimited support from Billy, there is a significant inprovement in my wring and speaking paper.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script>
+			var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+var i;
+var slides = document.getElementsByClassName("mySlides");
+var dots = document.getElementsByClassName("dot");
+if (n > slides.length) {slideIndex = 1}
+if (n < 1) {slideIndex = slides.length}
+for (i = 0; i < slides.length; i++) {
+		slides[i].style.display = "none";
+}
+for (i = 0; i < dots.length; i++) {
+		dots[i].className = dots[i].className.replace(" active", "");
+}
+slides[slideIndex-1].style.display = "block";
+dots[slideIndex-1].className += " active";
+}
+	</script>
+	</body>
+</html>
